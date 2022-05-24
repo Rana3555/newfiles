@@ -1,0 +1,95 @@
+<form>
+    <div class="container">
+        <div class="row bg-light mt-5 p-3 shadow rounded border">
+            <div class="col-lg-6">
+                <img src="assets/reg.jpg" class="img-fluid h-100" />
+            </div>
+            <div class="col-lg-6">
+                <h1 class="text-center">Register</h1>
+                <hr>
+                <form [formGroup]="registerform" (ngSubmit)="onSubmit()">
+                    <div class="mb-2">
+                        <div class="form-group">
+                            <label for="FirstName" class="form-label">Enter Your Name <span>*</span></label>
+                            <input type="text" placeholder="Enter Your Name" formControlName="FirstName"
+                                class="form-control" id="FirstName"
+                                [ngClass]="{ 'is-invalid': submitted && f['FirstName'].errors }"
+                                aria-describedby="FirstName">
+                            <div *ngIf="submitted && f['FirstName'].errors" class="invalid-feedback">
+                                <div *ngIf="f['FirstName'].errors['required']">Name is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="form-label">Email
+                                address<span>*</span></label>
+                            <input type="email" placeholder="Enter Your Email" formControlName="email"
+                                class="form-control" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                                <div *ngIf="f['email'].errors['required']">Email is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="form-group">
+                            <label for="Mobile" class="form-label">Mobile Number<span>*</span></label>
+                            <input type="number" placeholder="Enter Your Mobile Number" formControlName="Mobile"
+                                class="form-control" [ngClass]="{ 'is-invalid': submitted && f['Mobile'].errors }"
+                                id="Mobile" aria-describedby="Mobile">
+                            <div *ngIf="submitted && f['Mobile'].errors" class="invalid-feedback">
+                                <div *ngIf="f['Mobile'].errors['required']">Mobile is required</div>
+                                <div *ngIf="f['Mobile'].errors['pattern']">Please, Enter 10 digit Mobile Number.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password<span>*</span></label>
+                            <input type="password" placeholder="Enter New Password" formControlName="password"
+                                class="form-control" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+                                id="exampleInputPassword1">
+                            <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                                <div *ngIf="f['password'].errors['required']">Password is required</div>
+                                <div *ngIf="f['password'].errors['minlength']">Password at least 6</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="form-group">
+                            <label for="repassword" class="form-label">Confirm Password<span>*</span></label>
+                            <input type="password" placeholder="Repeat Same Password" formControlName="repassword"
+                                class="form-control" [ngClass]="{ 'is-invalid': submitted && f['repassword'].errors }"
+                                id="repassword">
+                            <div *ngIf="submitted && f['repassword'].errors" class="invalid-feedback">
+                                <div *ngIf="f['repassword'].errors['required']">Confirm Password is required
+                                </div>
+                                <div *ngIf="f['repassword'].errors['MustMatch']">Password did't match</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            <p class="mx-3"> By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                        </label> 
+                        <div *ngIf="submitted && f['checkbox'].errors" class="invalid-feedback">
+                            <div *ngIf="f['checkbox'].errors['required']">Please verify</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary text-center submit">Register</button>
+                    </div>
+                    <div class="text-center mt-3">
+                        <p>Already have an account? <a routerLink="">Sign in</a>.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
