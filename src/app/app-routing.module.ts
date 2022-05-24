@@ -12,6 +12,7 @@ import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { YoutubeComponent } from './youtube/youtube.component';
+import { RestComponent } from './rest/rest.component';
 
 const routes: Routes = [
   { path: "", pathMatch: "full",redirectTo: "/home"},
@@ -27,7 +28,8 @@ const routes: Routes = [
   { path: 'child', component:ChildComponent},
   { path: 'parent', component:ParentComponent},
   { path: 'life-cycle', component:LifeCycleComponent},
-  {path: 'youtube', component:YoutubeComponent}
+  {path: 'youtube', component:YoutubeComponent},
+  { path: 'rest',component:RestComponent}
   
   ];
 

@@ -31,6 +31,7 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { LifeComponent } from './life/life.component';
 import { YoutubeComponent } from './youtube/youtube.component'
 import { NgChartsModule } from 'ng2-charts';
+import { RestComponent } from './rest/rest.component';
 PlotlyModule.plotlyjs = PlotlyJS;
 
 @NgModule({
@@ -49,6 +50,7 @@ PlotlyModule.plotlyjs = PlotlyJS;
     LifeCycleComponent,
     LifeComponent,
     YoutubeComponent,
+    RestComponent,
 
   
    
