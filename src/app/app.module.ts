@@ -35,6 +35,8 @@ import { RestComponent } from './rest/rest.component';
 import { Ng2SearchPipeModule} from 'ng2-search-filter';
 import { Ng2OrderModule} from 'ng2-order-pipe';
 import { NgxPaginationModule} from 'ngx-pagination';
+import { InfiniteScrollComponent } from './infinite-scroll/infinite-scroll.component';
+import { InfiniteScrollModule } from "ngx-infinite-scroll";
 PlotlyModule.plotlyjs = PlotlyJS;
 
 @NgModule({
@@ -54,6 +56,8 @@ PlotlyModule.plotlyjs = PlotlyJS;
     LifeComponent,
     YoutubeComponent,
     RestComponent,
+    InfiniteScrollComponent,
+    
 
   
    
@@ -76,7 +80,8 @@ PlotlyModule.plotlyjs = PlotlyJS;
     NgChartsModule,
     Ng2SearchPipeModule,
     Ng2OrderModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    InfiniteScrollModule
     
   ],
   providers: [UserService],
