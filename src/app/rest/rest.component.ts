@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { response } from 'express';
 import { RestService } from 'rest.service';
 import { Users } from 'users';
 
@@ -10,12 +9,28 @@ import { Users } from 'users';
 })
 export class RestComponent implements OnInit {
   Users: Users[] = [];
-  constructor(public rs:RestService) { }
+  firstName: any;
+  p: number = 1;
+  constructor(public rs: RestService) { }
 
   ngOnInit(): void {
     this.rs.getUsers().subscribe((response) => {
       this.Users = response;
-    })
+    });
   }
-
+  Search(){
+    if(this.firstName == "") {
+      this.ngOnInit();
+    } else {
+      this.Users = this.Users.filter(res => {
+        return res. firstName?.toLocaleLowerCase().match(this.firstName.toLocaleLowerCase());
+      });
+    }
+  }
+  key: string = 'id';
+  reverse:boolean = false;
+  sort(key: string) {
+    this.key = key;
+    this.reverse = !this.reverse;
+  }
 }

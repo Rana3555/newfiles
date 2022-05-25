@@ -32,6 +32,9 @@ import { LifeComponent } from './life/life.component';
 import { YoutubeComponent } from './youtube/youtube.component'
 import { NgChartsModule } from 'ng2-charts';
 import { RestComponent } from './rest/rest.component';
+import { Ng2SearchPipeModule} from 'ng2-search-filter';
+import { Ng2OrderModule} from 'ng2-order-pipe';
+import { NgxPaginationModule} from 'ngx-pagination';
 PlotlyModule.plotlyjs = PlotlyJS;
 
 @NgModule({
@@ -70,7 +73,10 @@ PlotlyModule.plotlyjs = PlotlyJS;
     CalendarModule,
     SliderModule,
     HttpClientModule,
-    NgChartsModule
+    NgChartsModule,
+    Ng2SearchPipeModule,
+    Ng2OrderModule,
+    NgxPaginationModule
     
   ],
   providers: [UserService],
