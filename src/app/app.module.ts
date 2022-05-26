@@ -39,6 +39,7 @@ import { NgxPaginationModule} from 'ngx-pagination';
 import { InfiniteScrollComponent } from './infinite-scroll/infinite-scroll.component';
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
 import { AgngularGridComponent } from './agngular-grid/agngular-grid.component';
+
 PlotlyModule.plotlyjs = PlotlyJS;
 
 

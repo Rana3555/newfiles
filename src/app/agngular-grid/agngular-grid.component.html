@@ -1,29 +1,55 @@
-<div class="container">
-    <h1 class="text-center">
+<div class="container text-center">
+    <h1>
         {{title}}!
     </h1>
+</div>
 
 <!-- Button to clear selection -->
 <!-- <button (click)="clearSelection()">Clear Selection</button> -->
-<button class="btn-primary"
-(click)="onBtExport()"
-style="margin-bottom: 5px; font-weight: bold;"
-> Export to Excel
-</button>
+<div class="container text-center">
+    <label for="">Filter :</label>
+    <input type="text" id="filter-text-box"  class="ms-2" placeholder="Filter..." (input)="onFilterTextBoxChanged()" />
+</div><br>
+<div class="text-center">
+    <button (click)="onBtExport()" class="m-auto btn btn-info" style="margin-bottom: 5px; font-weight: bold;"> Export to
+        Excel</button>
+    <button (click)="onBtnExport1()" class=" ms-5 btn btn-primary">Download CSV export file</button>
+</div><br>
+<div class="container-fluid text-center" style="font-size:larger;background-color:rgb(68, 166, 208)">
 
-<button class="btn-success" (click)="onBtnExport1()">Download CSV export file</button>
+    Selection:
 
-<div class="container">
-    <ag-grid-angular
-    style="width: 1000px; height: 100vh;"
-    class="ag-theme-alpine"
-    [columnDefs]="columnDefs"
-    [defaultColDef]="defaultColDef"
-    [rowData]="rowData"
-    (gridReady)="onGridReady($event)"
-  ></ag-grid-angular>
+    <span id="selectedRows"></span>
+
+  </div>
+  <div class="container">
+
+    <ag-grid-angular style="width: 1000px; height: 100vh;" class="ag-theme-alpine" [columnDefs]="columnDefs"
+        [defaultColDef]="defaultColDef"
+        [paginationPageSize]="paginationPageSize"
+        [suppressAggFuncInHeader]="true"
+        [rowSelection]="rowSelection"
+        [autoGroupColumnDef]="autoGroupColumnDef"
+        [rowData]="rowData"
+        (selectionChanged)="onSelectionChanged()"
+        (gridReady)="onGridReady($event)"  
+        ></ag-grid-angular>
+
+        <!-- if we want the multi selection with one click  -->
+
+      <!-- [rowMultiSelectWithClick]="true" -->
 
 </div>
-</div>
+
+<!-- <div class="container">
+    <ag-grid-angular style="width: 1000px; height: 100vh;" class="ag-theme-alpine" [columnDefs]="columnDefs"
+        [defaultColDef]="defaultColDef" [rowData]="rowData" (gridReady)="onGridReady($event)" 
+        [paginationPageSize]="paginationPageSize"
+        [suppressAggFuncInHeader]="true"
+    
+        [autoGroupColumnDef]="autoGroupColumnDef">
+    </ag-grid-angular>
+</div> -->
+
 
 
