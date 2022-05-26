@@ -31,13 +31,16 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { LifeComponent } from './life/life.component';
 import { YoutubeComponent } from './youtube/youtube.component'
 import { NgChartsModule } from 'ng2-charts';
+import { AgGridModule } from 'ag-grid-angular';
 import { RestComponent } from './rest/rest.component';
 import { Ng2SearchPipeModule} from 'ng2-search-filter';
 import { Ng2OrderModule} from 'ng2-order-pipe';
 import { NgxPaginationModule} from 'ngx-pagination';
 import { InfiniteScrollComponent } from './infinite-scroll/infinite-scroll.component';
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
+import { AgngularGridComponent } from './agngular-grid/agngular-grid.component';
 PlotlyModule.plotlyjs = PlotlyJS;
+
 
 @NgModule({
   declarations: [
@@ -57,6 +60,7 @@ PlotlyModule.plotlyjs = PlotlyJS;
     YoutubeComponent,
     RestComponent,
     InfiniteScrollComponent,
+    AgngularGridComponent,
     
 
   
@@ -81,7 +85,9 @@ PlotlyModule.plotlyjs = PlotlyJS;
     Ng2SearchPipeModule,
     Ng2OrderModule,
     NgxPaginationModule,
-    InfiniteScrollModule
+    AgGridModule,
+    InfiniteScrollModule,
+    
     
   ],
   providers: [UserService],

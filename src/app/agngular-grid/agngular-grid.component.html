@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 class="text-center">
+        {{title}}!
+    </h1>
+
+<!-- Button to clear selection -->
+<!-- <button (click)="clearSelection()">Clear Selection</button> -->
+<button class="btn-primary"
+(click)="onBtExport()"
+style="margin-bottom: 5px; font-weight: bold;"
+> Export to Excel
+</button>
+
+<button class="btn-success" (click)="onBtnExport1()">Download CSV export file</button>
+
+<div class="container">
+    <ag-grid-angular
+    style="width: 1000px; height: 100vh;"
+    class="ag-theme-alpine"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [rowData]="rowData"
+    (gridReady)="onGridReady($event)"
+  ></ag-grid-angular>
+
+</div>
+</div>
+
+

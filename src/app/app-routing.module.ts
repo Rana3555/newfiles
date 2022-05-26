@@ -14,6 +14,7 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { YoutubeComponent } from './youtube/youtube.component';
 import { RestComponent } from './rest/rest.component';
 import { InfiniteScrollComponent } from './infinite-scroll/infinite-scroll.component';
+import { AgngularGridComponent } from './agngular-grid/agngular-grid.component';
 
 const routes: Routes = [
   { path: "", pathMatch: "full",redirectTo: "/home"},
@@ -31,7 +32,8 @@ const routes: Routes = [
   { path: 'life-cycle', component:LifeCycleComponent},
   { path: 'youtube', component:YoutubeComponent},
   { path: 'rest',component:RestComponent},
-  { path: 'infinite-scroll',component:InfiniteScrollComponent}
+  { path: 'infinite-scroll',component:InfiniteScrollComponent},
+  {path: 'agngular-grid',component:AgngularGridComponent}
   
   ];
 
