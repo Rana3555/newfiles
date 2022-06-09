@@ -1,0 +1,47 @@
+<div class="container">
+<p>parent works!</p>
+
+<button class="btn btn-success" (click)="toggleChild()">toggle Child</button>
+
+<input type="text" [(ngModel)]="myName">
+
+<app-child *ngIf="isChild" [MyName]="myName">
+    <h2 #projectedContent>Angular child & parent components</h2>
+</app-child>
+<br>
+<br>
+<h3>Angular property binding</h3>
+<button class="btn btn-warning" [disabled] ="!allowNewuser" (click)="changeUserCreatedStatus()"> Add user</button>
+<div>{{userCreatedStatus}}</div>
+
+<br>
+<br>
+
+
+
+<div class="form-group">
+<h5 class="text">One way Data binding</h5>
+<label for="state"><h5>Select </h5></label>
+<select class="form" id="gender" name="state" [ngModel]="state">
+<option value="select">--Select--</option>
+<option value="Andhra">Andhra Pradesh</option>
+<option value="telangana">Telangana</option>
+</select>
+</div>
+<br>
+    <div class="col-md-6">
+        <div class="form-group">
+            <h3>Two way data binding</h3>
+            <label>About</label>
+            <textarea class="form-control" row="3" name="about" [(ngModel)]="about"></textarea>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div>{{about}}</div>
+            <!-- <div class="mt-3">
+                <button type="submit" class="btn btn-primary" [disabled]="">Submit</button>
+            </div> -->
+    </div>
+
+
+</div>

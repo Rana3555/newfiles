@@ -1,0 +1,84 @@
+{
+    "Users":[
+        {
+            "id":1,
+            "firstName": "Sri",
+            "lastName": "Ram",
+            "email": "Sriram@gmail.com",
+            "mobile":"999999999",
+            "salary":"10000"
+        },
+        {
+            "id":2,
+            "firstName": "Rana",
+            "lastName": "Naidu",
+            "email": "rana@gmail.com",
+            "mobile":"8888888888",
+            "salary":"10000"
+        },
+        {
+            "id":3,
+            "firstName": "Raj",
+            "lastName": "Rajesh",
+            "email": "rajesh@gmail.com",
+            "mobile":"7895645415",
+            "salary":"15000"
+        },
+        {
+            "id":4,
+            "firstName": "Singh",
+            "lastName": "Veeru",
+            "email": "singhVeeru@gmail.com",
+            "mobile":"9011242415",
+            "salary":"10000"
+        },
+        {
+            "id":5,
+            "firstName": "durga",
+            "lastName": "prasad",
+            "email": "durgaprasad@gmail.com",
+            "mobile":"901562115",
+            "salary":"15000"
+        },
+        {
+            "id":6,
+            "firstName": "Charan",
+            "lastName": "sai",
+            "email": "Charansai@gmail.com",
+            "mobile":"9898525565",
+            "salary":"15000"
+        },
+        {
+            "id":7,
+            "firstName": "Prudhvi",
+            "lastName": "kasina",
+            "email": "prudhvikasina@gmail.com",
+            "mobile":"9787878415",
+            "salary":"15000"
+        },
+        {
+            "id":8,
+            "firstName": "sriram",
+            "lastName": "Naidu",
+            "email": "sriramnaidu@gmail.com",
+            "mobile":"8186816948",
+            "salary":"150000"
+        },
+        {
+            "id":9,
+            "firstName": "Sri",
+            "lastName": "Ram",
+            "email": "Sriram@gmail.com",
+            "mobile":"999999999",
+            "salary":"10000"
+        },
+        {
+            "id":10,
+            "firstName": "Rana",
+            "lastName": "Naidu",
+            "email": "rana@gmail.com",
+            "mobile":"8888888888",
+            "salary":"10000"
+        }
+    ]
+}

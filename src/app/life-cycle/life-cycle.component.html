@@ -1,0 +1,15 @@
+<p>life-cycle works!</p>
+<p>life works!</p>
+<div class="container">
+    <input type="text" #input>
+    <button (click)="OnSubmit(input)">Submit</button>
+    <app-life [value]="inputText" *ngIf="destory">
+        <h5>This is My Project {{ inputText }}</h5>
+    </app-life>
+
+
+<br>
+<button (click)="DestroyComponent()">Destroy</button>
+
+
+</div>

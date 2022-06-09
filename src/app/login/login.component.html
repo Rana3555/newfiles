@@ -1,0 +1,44 @@
+<form>
+    <div class="container">
+        <div class="row bg-light mt-5 p-3 shadow rounded border">
+            <div class="col-lg-6">
+                <img src="assets/login.jpg" class="img-fluid h-100" />
+            </div>
+            <div class="col-lg-6">
+                <h1 class="text-center">Log In</h1>
+                <hr>
+                <form [formGroup]="loginForm" class="login-form-container" (ngSubmit)="onSubmit()">
+                    <div class="mb-2">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="form-label">Email <span>*</span></label>
+                            <input type="email" placeholder="Enter Email" formControlName="email" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                                <div *ngIf="f['email'].errors['required']">Email is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password<span>*</span></label>
+                            <input type="password" placeholder="Enter Password" formControlName="password" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+                                id="exampleInputPassword1">
+                            <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                                <div *ngIf="f['password'].errors['required']">Password is required</div>
+                                <div *ngIf="f['password'].errors['minlength']">Password at least 6</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary submit">Login</button>
+                    </div>
+                    <div class="text-center mt-3">
+                        <p>Click here to create your account <a routerLink="/login">Create Account</a>.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</form>

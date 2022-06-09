@@ -1,0 +1,166 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <plotly-plot
+      [data]="graph1.data"
+      [layout]="graph1.layout"
+      [useResizeHandler]="true"
+      [style]="{position:'relative',width: '100%', height: '100%'}">
+    </plotly-plot>
+    </div>
+    <div class="col-md-6">
+     <!-- <h1>graphs</h1> -->
+      <plotly-plot
+      [data]="graph2.data"
+      [layout]="graph2.layout"
+      [useResizeHandler]="true">
+      </plotly-plot> 
+    </div>
+    
+    <div class="col-md-6">
+      <plotly-plot
+      [data]="graph5.data"
+      [layout]="graph5.layout"
+      [useResizeHandler]="true"
+      [style]="{position:'relative',width: '100%', height: '100%'}">
+      </plotly-plot>
+    </div>
+    <div class="col-md-6">
+      <plotly-plot
+       [data]="data"
+       [layout]="layout"
+       [config]="config">
+      </plotly-plot>
+    </div>
+    <div class="col-md-6">
+      <plotly-plot
+      [data]="chart.data"
+      [layout]="chart.layout"  
+      [config]="chart.config"
+      [useResizeHandler]="true">
+    </plotly-plot>
+    </div>
+    <div class="col-md-6">
+      <plotly-plot
+        [data]="graph9.data"
+        [layout]="graph9.layout"
+        [useResizeHandler]="true"
+        [style]="{position:'relative',width: '100%', height: '100%'}">
+        </plotly-plot>
+    </div>
+    <!-- new -->
+    <div class="col-md-6">
+      <plotly-plot
+      [data]="modebar.data"
+      [layout]="modebar.layout"
+      [config]="modebar.config">
+      </plotly-plot>
+    </div>
+    <!-- new2 -->
+    <div class="col-md-6">
+      <plotly-plot
+      [data]="custom.data"
+      [layout]="custom.layout"
+      [config]="custom.config">
+      </plotly-plot>
+    </div>
+    <!-- new3 -->
+    <div class="col-md-6">
+      <plotly-plot
+      [data]="Chartstudiomodebar.data"
+      [layout]="Chartstudiomodebar.layout"
+      [config]="Chartstudiomodebar.config">
+      </plotly-plot>
+    </div>
+    <!-- new4 -->
+    <div class="col-md-6">
+      <plotly-plot
+      [data]="Customizetheeditchartlinktext.data"
+      [layout]="Customizetheeditchartlinktext.layout"
+      [config]="Customizetheeditchartlinktext.config">
+      </plotly-plot>
+    </div>
+    <!-- new5 -->
+    <div class="col-md-6">
+      <plotly-plot
+      [data]="AlwaysdisplaytheModebar.data"
+      [layout]="AlwaysdisplaytheModebar.layout"
+      [config]="AlwaysdisplaytheModebar.config">
+      </plotly-plot>
+    </div>
+    <!-- new6 -->
+    <div class="col-md-6">
+      <plotly-plot
+      [data]="Displaytheeditchartlink.data"
+      [layout]="Displaytheeditchartlink.layout"
+      [config]="Displaytheeditchartlink.config">
+      </plotly-plot>
+    </div>
+    <!-- new7 -->
+    <div class="col-md-6">
+      <plotly-plot
+      [data]="Responsivetowindowsize.data"
+      [layout]="Responsivetowindowsize.layout"
+      [config]="Responsivetowindowsize.config">
+      </plotly-plot>
+    </div>
+    <!-- new8 -->
+    <div class="col-md-6">
+      <plotly-plot
+      [data]="DownloadChartasSVGinsteadofPNG.data"
+      [layout]="DownloadChartasSVGinsteadofPNG.layout"
+      [config]="DownloadChartasSVGinsteadofPNG.config">
+      </plotly-plot>
+    </div>
+    <!-- new9 -->
+    <div class="col-md-6">
+      <plotly-plot
+      [data]="CreateaStaticChart.data"
+      [layout]="CreateaStaticChart.layout"
+      [config]="CreateaStaticChart.config">
+      </plotly-plot>
+    </div>
+    <!-- polar charts -->
+    <div class="col-md-6">
+      <div style="display: block">
+        <canvas baseChart
+                [datasets]="polarChartData"
+                [labels]="polarChartLabels"
+                [options]="polarChartOptions"
+                [legend]="polarChartLegend"
+                [type]="'polarArea'"
+                >
+        </canvas>
+      </div>
+    </div>
+    <!-- polar bar charts -->
+    <div class="col-md-6">
+      <div style="display: block">
+        <canvas baseChart
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [type]="'bar'">
+        </canvas>
+      </div>
+    </div>
+
+  </div>
+</div>
+    
+
+
+
+<!-- <div class="col-md-6">
+      <plotly-plot
+        [data]="graph3.data"
+        [layout]="graph3.layout"
+        [useResizeHandler]="true"
+        [style]="{position:'relative',width: '100%', height: '100%'}">
+        </plotly-plot>
+    </div> -->
+
+
+
+
